@@ -1,0 +1,16 @@
+clear;
+
+I=imread('test6.jpg');
+I1=I(:,:,1);
+G=edge(I1,'Sobel');
+subplot(2,2,1);
+imshow(I1);
+title('original');
+subplot(2,2,2);
+imshow(G);
+title('Sobel');
+
+G2=edge(I1,'Canny');
+subplot(2,2,3);
+imshow(G2);
+title('Canny');
